@@ -7,3 +7,14 @@ beforeupdate：在数据刷新之前，更改数据不会触发重新渲染
 updated：数据更新完成，这个阶段尽量不要更改数据，可能陷入循环
 beforedestroy:实例销毁之前，可以操作实例，比如清除定时器
 destroyed:实例已经销毁，不能操作实例，数据绑定销毁，只有DOM空壳
+###父子组件顺序###
+调用顺序 先父后子
+渲染顺序 先子后父
+销毁顺序 先父后子
+销毁完成顺序 先子后父
+
+父beforecreated  父created 父 beforemounted  子beforecreated  子created    子beforemounted 子mounted  父mounted
+
+父beforedestroy  子beforedestory 子 destroyed  父 destoryed
+###父子通信###
+props  :on $emit()
