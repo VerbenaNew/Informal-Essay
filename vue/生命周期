@@ -1,0 +1,9 @@
+####生命周期####
+beforeCreated：new Vue()触发的第一个钩子，这个阶段data、mounted、watch、computed定义的数据和方法都不能访问；
+created：与DOM相关的交互不能访问，但是数据已经可以访问，此时更改数据不会触发updated函数
+beforeMounted：template开始渲染，虚拟DOM已经开始创建了，即将开始渲染，更改数据不会触发updated函数
+mounted：挂载完成，此时可以操作DOM，数据双向绑定完成，更改数据会触发updated函数
+beforeupdate：在数据刷新之前，更改数据不会触发重新渲染
+updated：数据更新完成，这个阶段尽量不要更改数据，可能陷入循环
+beforedestroy:实例销毁之前，可以操作实例，比如清除定时器
+destroyed:实例已经销毁，不能操作实例，数据绑定销毁，只有DOM空壳
