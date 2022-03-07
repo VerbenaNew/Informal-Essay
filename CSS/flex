@@ -1,0 +1,15 @@
+###flex布局###
+####父容器属性
+ 1）flex-direction     方向
+ 2）flex-wrap      换行
+ 3）flex-flow      前俩的概述
+ 4）justify-content      主轴对齐
+ 5）align-items      交叉轴对齐
+ 6）align-content      多条轴线
+####子项目属性
+ 1）order      排序方式
+ 2）flex—grow      放大
+ 3）flex-shrink      缩小
+ 4）flex-basis     剩余空间分配
+ 5）flex       前四个概述
+ 6）align-self       单独的样式
